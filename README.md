@@ -20,9 +20,9 @@ If you want to convert models on your own, simply instantiate the model, and cal
 $bustle_post = new \Bustle\Post( $post );
 return $bustle_post->get_model();
 ```
-### MobileDoc only
+### Mobiledoc only
 
-If you want to just convert your post content to the MobileDoc format for export to another MobileDoc-capable system, you can call: `new \Bustle\Mobiledoc\Wrapper( $post )`
+If you want to just convert your post content to the Mobiledoc format for export to another Mobiledoc-capable system, you can call: `new \Bustle\Mobiledoc\Wrapper( $post )`
 
 ## Filters
 
