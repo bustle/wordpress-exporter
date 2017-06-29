@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Bustle Exporter
  * Description: Register API routes and CLI commands for converting WordPress posts into Bustle objects.
- * Plugin URI:
+ * Plugin URI: https://github.com/bustle/wordpress-exporter
  * Author: Bustle
- * Author URI:
- * Version: 1.0.0
+ * Author URI: https://www.bustle.com
+ * Version: 1.0.1
  * License: GPLv2 or later
  *
  * @package Bustle
