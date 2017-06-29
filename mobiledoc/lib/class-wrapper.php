@@ -108,7 +108,7 @@ class Wrapper {
 		}
 
 		// Wrap the content in <p> tags so its acceptable for DOMDocument.
-		$content = wpautop( $content );
+		$content = wpautop( $content, false );
 
 		// Use DOMDocument to parse HTML.
 		$dom = new \DOMDocument();
