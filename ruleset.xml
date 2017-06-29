@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ruleset name="Bustle WordPress Exporter Linting Rules"
+		 xmlns="http://pmd.sf.net/ruleset/1.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                     http://pmd.sf.net/ruleset_xml_schema.xsd"
+		 xsi:noNamespaceSchemaLocation="
+                     http://pmd.sf.net/ruleset_xml_schema.xsd">
+	<description>
+		Bustle WordPress Exporter Linting Rules
+	</description>
+
+	<!-- Install WordPress standards -->
+	<config name="installed_paths" value="vendor/wp-coding-standards/wpcs" />
+
+	<!-- Exclude vendor directory and CLI class -->
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/class-cli.php</exclude-pattern>
+
+	<!-- Use WordPress standard and don't enforce snake_case rules -->
+	<rule ref="WordPress">
+		<exclude name="WordPress.NamingConventions.ValidVariableName.NotSnakeCase"/>
+		<exclude name="WordPress.NamingConventions.ValidVariableName.NotSnakeCaseMemberVar"/>
+		<exclude name="WordPress.NamingConventions.ValidVariableName.MemberNotSnakeCase"/>
+		<exclude name="Squiz.Commenting.FileComment.Missing" />
+	</rule>
+
+</ruleset>

@@ -1,0 +1,10 @@
+{
+  "name": "bustle/wordpress-exporter",
+  "type": "wordpress-plugin",
+  "description": "Create export objects for Bustle",
+  "authors": [],
+  "require-dev": {
+    "squizlabs/php_codesniffer": "2.9.1",
+    "wp-coding-standards/wpcs": "0.11.0"
+  }
+}
