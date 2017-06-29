@@ -1,5 +1,5 @@
 {
-  "name": "bustle/wordpress-exporter",
+  "name": "bustle/bustle-wordpress-exporter",
   "type": "wordpress-plugin",
   "description": "Create export objects for Bustle",
   "license"    : "GPL-2.0",
