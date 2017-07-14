@@ -517,12 +517,23 @@ class Wrapper {
 
 				case 'span' :
 
-					// <span> with the "s1" class indicates a copy-paste artifact
+					// Bool for determining if we need to sanitize
+					$sanitize = false;
+
+					// <span> with no class probably has no purpose
+					if ( ! $element->hasAttribute( 'class' ) ) {
+						$sanitize = true;
+					}
+
+					// <span> with the "s1" or "s2" class indicates a copy-paste artifact.
 					// We don't need those artifacts, so just strip the elements
-					// down to their text content.
-					if ( $element->hasAttribute( 'class' ) && strpos( $element->getAttribute( 'class' ),
-					's1' ) !== false
-					) {
+					// down to their text content; also sanitize skimlinks artifacts.
+					if ( $element->hasAttribute( 'class' ) && in_array( $element->getAttribute( 'class' ), [ 's1', 's2', 'skimlinks-unlinked'] ) ) {
+						$sanitize = true;
+					}
+
+
+					if ( $sanitize ) {
 						$element = new \DOMText( $element->textContent );
 					}
 
