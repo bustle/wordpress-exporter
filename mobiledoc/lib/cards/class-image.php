@@ -63,7 +63,11 @@ class Image extends Card {
 
 			if ( isset( $payload['height'] ) && isset( $payload['height'] ) ) {
 
-				$payload['ratio'] = $payload['height'] / $payload['width'];
+				$payload['ratio'] = 1;
+
+				if ( $payload['width'] > 0 ) {
+					$payload['ratio'] = $payload['height'] / $payload['width'];
+				}	
 
 				// Set orientation.
 				$payload['orientation'] = 'landscape';
