@@ -61,7 +61,7 @@ class Image extends Card {
 				$payload['width'] = (int) $img->getAttribute( 'width' );
 			}
 
-			if ( isset( $payload['height'] ) && isset( $payload['height'] ) ) {
+			if ( isset( $payload['height'] ) && isset( $payload['width'] ) ) {
 
 				$payload['ratio'] = $payload['height'] / $payload['width'];
 
