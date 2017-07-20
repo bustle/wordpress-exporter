@@ -18,12 +18,7 @@ class Video_Wrapper extends Wrapper {
 	 *
 	 * @var array
 	 */
-	public $sections = [
-		[
-			10,
-			0,
-		],
-	];
+	public $sections = [];
 
 	/**
 	 * List of components to check for; order is
@@ -32,9 +27,7 @@ class Video_Wrapper extends Wrapper {
 	 * @var array
 	 */
 	protected $components = [
-		'\\Bustle\\Mobiledoc\\Cards\\Video',
-		'\\Bustle\\Mobiledoc\\Cards\\Embed',
-		'\\Bustle\\Mobiledoc\\Cards\\Iframe',
+		'\\Bustle\\Mobiledoc\\Cards\\Video'
 	];
 
 	/**
@@ -52,9 +45,17 @@ class Video_Wrapper extends Wrapper {
 			$card = $this->get_card( $nodes->item( 0 ) );
 
 			if ( false !== $card ) {
+
+				// Set the single card
 				$this->cards[] = [
 					$card->get_name(),
 					$card->get_payload(),
+				];
+
+				// Set the single section
+				$this->sections[] = [
+					10,
+					0,
 				];
 			}
 		}
