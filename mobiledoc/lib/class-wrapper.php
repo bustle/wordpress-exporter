@@ -107,6 +107,9 @@ class Wrapper {
 			$content = $this->post->post_content;
 		}
 
+		// Apply filters to raw content before transformation
+		$content = apply_filters( 'bustle_mobiledoc_pre_content', $content, $this->post );
+
 		// Wrap the content in <p> tags so its acceptable for DOMDocument.
 		$content = wpautop( $content, false );
 
